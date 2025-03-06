@@ -1,4 +1,4 @@
-function procesarFormulario (event) {
+document.productoForm = (event) => {
   event.preventDefault()
 
   // Obtener valores del formulario
@@ -9,7 +9,7 @@ function procesarFormulario (event) {
 
   // Validar entrada
   if (!nombre || isNaN(precio) || isNaN(cantidad) || !categoria) {
-    alert('Por favor, complete todos los campos correctamente')
+    window.alert('Por favor, complete todos los campos correctamente')
     return
   }
 
@@ -57,5 +57,5 @@ function procesarFormulario (event) {
         `
 
   // Limpiar formulario
-  form.reset()
+  window.form.reset()
 }
